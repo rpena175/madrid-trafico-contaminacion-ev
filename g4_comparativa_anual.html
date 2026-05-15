@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.17.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-913c64a60450b2c8ca3f2198d5781cee"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "A\u00f1o", "legend": null, "scale": {"domain": [2019, 2020, 2021, 2022, 2023, 2024, 2025], "range": ["#1f77b4", "#d62728", "#ff7f0e", "#2ca02c", "#9467bd", "#8c564b", "#e377c2"]}, "type": "ordinal"}, "column": {"field": "variable", "title": "", "type": "nominal"}, "tooltip": [{"field": "A\u00f1o", "type": "ordinal"}, {"field": "media", "format": ".1f", "title": "Valor absoluto", "type": "quantitative"}, {"field": "pct_2019", "format": ".1f", "title": "% de 2019", "type": "quantitative"}], "x": {"field": "A\u00f1o", "title": "", "type": "ordinal"}, "y": {"field": "pct_2019", "scale": {"domain": [0, 120]}, "title": "% respecto a 2019", "type": "quantitative"}}, "height": 350, "title": "Media anual de tr\u00e1fico y NO\u2082 normalizada a 2019", "width": 300, "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json", "datasets": {"data-913c64a60450b2c8ca3f2198d5781cee": [{"A\u00f1o": 2019, "media": 32.82999187874874, "variable": "NO\u2082 (\u00b5g/m\u00b3)", "pct_2019": 100.0}, {"A\u00f1o": 2020, "media": 26.57288818117138, "variable": "NO\u2082 (\u00b5g/m\u00b3)", "pct_2019": 80.9}, {"A\u00f1o": 2021, "media": 27.935818455814136, "variable": "NO\u2082 (\u00b5g/m\u00b3)", "pct_2019": 85.1}, {"A\u00f1o": 2022, "media": 27.810497409173156, "variable": "NO\u2082 (\u00b5g/m\u00b3)", "pct_2019": 84.7}, {"A\u00f1o": 2023, "media": 26.893061244633074, "variable": "NO\u2082 (\u00b5g/m\u00b3)", "pct_2019": 81.9}, {"A\u00f1o": 2024, "media": 23.09164363479055, "variable": "NO\u2082 (\u00b5g/m\u00b3)", "pct_2019": 70.3}, {"A\u00f1o": 2025, "media": 22.55465176141796, "variable": "NO\u2082 (\u00b5g/m\u00b3)", "pct_2019": 68.7}, {"A\u00f1o": 2019, "media": 803.99098630137, "variable": "Tr\u00e1fico (veh/h)", "pct_2019": 100.0}, {"A\u00f1o": 2020, "media": 535.3934683954619, "variable": "Tr\u00e1fico (veh/h)", "pct_2019": 66.6}, {"A\u00f1o": 2021, "media": 645.0961764705883, "variable": "Tr\u00e1fico (veh/h)", "pct_2019": 80.2}, {"A\u00f1o": 2022, "media": 740.2754270696452, "variable": "Tr\u00e1fico (veh/h)", "pct_2019": 92.1}, {"A\u00f1o": 2023, "media": 868.4538377392889, "variable": "Tr\u00e1fico (veh/h)", "pct_2019": 108.0}, {"A\u00f1o": 2024, "media": 890.4452, "variable": "Tr\u00e1fico (veh/h)", "pct_2019": 110.8}, {"A\u00f1o": 2025, "media": 884.1106672760511, "variable": "Tr\u00e1fico (veh/h)", "pct_2019": 110.0}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
