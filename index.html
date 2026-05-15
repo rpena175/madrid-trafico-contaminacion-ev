@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Madrid · Tráfico, Contaminación y Electrificación 2019–2025</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0d1117;
+    color: #e6edf3;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+  }
+  .container { width: 100%; max-width: 520px; }
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(24px, 4vw, 36px);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+  }
+  h1 em { font-style: italic; color: #3b82f6; }
+  .sub { font-size: 13px; color: #8b949e; margin-bottom: 40px; }
+  .section-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #8b949e;
+    margin-bottom: 10px;
+  }
+  nav { display: flex; flex-direction: column; gap: 6px; margin-bottom: 28px; }
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border: 1px solid #21262d;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #e6edf3;
+    font-size: 14px;
+    background: #161b22;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  a:hover { border-color: #3b82f6; background: rgba(59,130,246,0.06); }
+  a.featured {
+    border-color: #3b82f6;
+    background: rgba(59,130,246,0.1);
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  a.featured:hover { background: rgba(59,130,246,0.18); }
+  .num { font-size: 11px; color: #8b949e; font-weight: 400; min-width: 24px; }
+  .arrow { color: #8b949e; font-size: 13px; flex-shrink: 0; }
+  a:hover .arrow { color: #3b82f6; }
+  .link-text { flex: 1; padding: 0 10px; }
+  footer { font-size: 11px; color: #8b949e; text-align: center; margin-top: 8px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <h1>Madrid: tráfico,<br><em>contaminación</em> y EV</h1>
+  <p class="sub">2019–2025 · Máster UNED · Visualización y Analítica de Datos</p>
+
+  <div class="section-label">Dashboard</div>
+  <nav>
+    <a class="featured" href="https://rpena175.github.io/madrid-trafico-contaminacion-ev/dashboard_madrid.html">
+      <span class="num">↗</span>
+      <span class="link-text">Dashboard completo — todos los gráficos</span>
+      <span class="arrow">→</span>
+    </a>
+  </nav>
+
+  <div class="section-label">Gráficos individuales</div>
+  <nav>
+    <a href="https://rpena175.github.io/madrid-trafico-contaminacion-ev/g1_evolucion_contaminantes.html">
+      <span class="num">G1</span>
+      <span class="link-text">Evolución mensual de contaminantes</span>
+      <span class="arrow">→</span>
+    </a>
+    <a href="https://rpena175.github.io/madrid-trafico-contaminacion-ev/g2_heatmap_hora_dia.html">
+      <span class="num">G2</span>
+      <span class="link-text">Heatmap hora × día de la semana</span>
+      <span class="arrow">→</span>
+    </a>
+    <a href="https://rpena175.github.io/madrid-trafico-contaminacion-ev/g3_scatter_trafico_no2.html">
+      <span class="num">G3</span>
+      <span class="link-text">Tráfico vs. NO₂ por periodo</span>
+      <span class="arrow">→</span>
+    </a>
+    <a href="https://rpena175.github.io/madrid-trafico-contaminacion-ev/g4_comparativa_anual.html">
+      <span class="num">G4</span>
+      <span class="link-text">Comparativa anual 2019–2025</span>
+      <span class="arrow">→</span>
+    </a>
+    <a href="https://rpena175.github.io/madrid-trafico-contaminacion-ev/g5_moderacion_meteo.html">
+      <span class="num">G5</span>
+      <span class="link-text">Moderación meteorológica</span>
+      <span class="arrow">→</span>
+    </a>
+    <a href="https://rpena175.github.io/madrid-trafico-contaminacion-ev/g6_electrificacion_aire.html">
+      <span class="num">G6</span>
+      <span class="link-text">Electrificación y calidad del aire</span>
+      <span class="arrow">→</span>
+    </a>
+    <a href="https://rpena175.github.io/madrid-trafico-contaminacion-ev/g7_dashboard_interactivo.html">
+      <span class="num">G7</span>
+      <span class="link-text">Explorador interactivo</span>
+      <span class="arrow">→</span>
+    </a>
+    <a href="https://rpena175.github.io/madrid-trafico-contaminacion-ev/g8_calendar_heatmap.html">
+      <span class="num">G8</span>
+      <span class="link-text">Calendario de NO₂ diario</span>
+      <span class="arrow">→</span>
+    </a>
+  </nav>
+
+  <footer>datos.madrid.es · datos.gob.es (DGT)</footer>
+</div>
+</body>
+</html>
